@@ -20,5 +20,10 @@ time.sleep(20)
 
 # Crear nuevo ticket
 driver.find_element(By.XPATH, "/html/body/div/div[1]/div[6]/form[2]/div[1]/input").click()
+campoAsunto = driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/form/div[1]/div[2]/div[1]/div/div[2]/div/div/div[4]/div[2]/input")
+campoAsunto.send_keys("prueba de asunto del ticket")
 
+# pulso en botón Crear
+driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/form/div[1]/div[2]/div[2]/div/div/div[2]/input").click()
+time.sleep(10)
 driver.close()
